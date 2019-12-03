@@ -1,0 +1,51 @@
+
+<div class="container">
+              <div class="input-group mb-3" style="width: 25%">
+                    <input type="text" [(ngModel)]="rid" (keyup)="findById(rid)" class="form-control" placeholder="Search">
+                    <div class="input-group-append">
+                      <button class="btn btn-success" type="button" (click)="findById(rid)">Go</button>
+                    </div>
+                  </div>
+    <h2>Basic Table</h2>            
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Country</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let showdata of data">
+          <td>{{showdata.id}}</td>
+          <td>{{showdata.name}}</td>
+          <td>{{showdata.country}}</td>
+          <td>{{showdata.salary}}</td>
+        </tr>
+        
+      </tbody>
+
+      <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Country</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{id}}</td>
+              <td>{{name}}</td>
+              <td>{{country}}</td>
+              <td>{{salary}}</td>
+            </tr>
+            
+          </tbody>
+    </table>
+  </div>
+
+<!-- <div>
+<h1>{{ result }}</h1>
+</div> -->
